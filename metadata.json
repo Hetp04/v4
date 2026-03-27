@@ -1,0 +1,5 @@
+{
+  "name": "Modern Login",
+  "description": "A clean, OpenAI-inspired login page with domain selection, username, password, and SSO options.",
+  "requestFramePermissions": []
+}
