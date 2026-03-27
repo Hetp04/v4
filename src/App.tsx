@@ -108,6 +108,9 @@ export default function App() {
                   className="primaryButton"
                 >
                   Log in
+                  <div className="arrow-wrapper" aria-hidden="true">
+                    <div className="arrow" />
+                  </div>
                 </button>
               </div>
             </form>

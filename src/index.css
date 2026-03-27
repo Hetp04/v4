@@ -318,24 +318,71 @@ body {
 }
 
 .primaryButton {
-  width: 100%;
-  background: var(--primary);
-  color: #fff;
+  --primary-color: #1e3a8a;
+  --secondary-color: #fff;
+  --hover-color: #1e40af;
+  --arrow-width: 11px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
   border: 0;
-  border-radius: 12px;
-  padding: 14px 16px;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  font-weight: bold;
+  width: 100%;
   font-size: 14px;
-  font-weight: 600;
   cursor: pointer;
-  transition: background-color 180ms ease, box-shadow 180ms ease,
-    transform 180ms ease;
-  box-shadow: 0 16px 40px rgba(30, 58, 138, 0.2);
+  transition: 0.2s background, box-shadow 180ms ease, transform 180ms ease;
+  box-shadow: 0 14px 34px rgba(30, 58, 138, 0.26);
 }
 
 .primaryButton:hover {
-  background: var(--primary-hover);
-  box-shadow: 0 18px 48px rgba(30, 58, 138, 0.3);
+  background-color: var(--hover-color);
+  box-shadow: 0 18px 44px rgba(30, 64, 175, 0.34);
   transform: translateY(-2px);
+}
+
+.primaryButton .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primaryButton .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.primaryButton .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.primaryButton:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.primaryButton:hover .arrow::before {
+  right: 0;
 }
 
 .divider {
