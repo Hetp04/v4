@@ -35,10 +35,13 @@ body {
 .page {
   min-height: 100vh;
   background-color: var(--bg-page);
-  /* Softer veil so more of the photo can show through */
   background-image: linear-gradient(
-      rgba(243, 244, 246, 0.72),
-      rgba(243, 244, 246, 0.72)
+      135deg,
+      rgba(243, 244, 246, 0.90) 0%,
+      rgba(243, 244, 246, 0.82) 22%,
+      rgba(243, 244, 246, 0.74) 50%,
+      rgba(243, 244, 246, 0.76) 82%,
+      rgba(243, 244, 246, 0.80) 100%
     ),
     url("../back.jpg");
   background-size: cover;
